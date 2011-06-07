@@ -37,11 +37,20 @@ static SmsManager *sharedSingleton;
     self.lastDate = [self getSmsDate];
     lastRowId = [self getLastRowId];
     [self checkRoutine];
+    synth = [[NSClassFromString(@"VSSpeechSynthesizer") alloc] init];
+    if (synth == nil) {
+      NSLog(@"Could not create voice synthesizer");
+    } else {
+      NSLog(@"saying hello");
+      [synth setVolume:1];
+      [synth startSpeakingString:@"Hello there! Moto madness is on"];
+    }
   }
   
   return self;
 }
 
+// MAIN LOOP ---------------------------------------------------------------------------------------
 - (void) checkRoutine {
   NSLog(@"checking...");
   NSDate *newDate = [self getSmsDate];
@@ -55,14 +64,20 @@ static SmsManager *sharedSingleton;
       NSLog(@"could not get texts.. ignoring");
     } else {
       for (Text *text in texts) {
-        NSLog(@"speaking %@", text);
-        [text speak];
+        NSString *spokenMessage = [text spokenMessage];
+        NSLog(@"speaking %@", spokenMessage);
+        if (synth == nil) {
+          NSLog(@"Could not create voice synthesizer");
+        } else {
+          [synth startSpeakingString:spokenMessage];
+        }
       }
     }
     [texts release];
   }
   [self performSelector:@selector(checkRoutine) withObject:nil afterDelay:3.0];
 }
+// END MAIN LOOP -----------------------------------------------------------------------------------
                       
 
 - (NSDate *) getSmsDate {
@@ -98,7 +113,6 @@ static SmsManager *sharedSingleton;
   }
   
   int rowId = sqlite3_column_int(compiledStatement, 0);
-  NSLog(@"any row id error; %s", sqlite3_errmsg(db));
   sqlite3_finalize(compiledStatement);
   sqlite3_close(db);
   NSLog(@"latest row id is %d", rowId);
@@ -148,10 +162,9 @@ err:
   return nil;
 }
 
-
 - (void)dealloc
 {
-    [super dealloc];
+  [super dealloc];
 }
 
 @end

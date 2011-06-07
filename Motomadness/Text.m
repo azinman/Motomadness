@@ -7,6 +7,8 @@
 //
 
 #import "Text.h"
+#import "ABContactsHelper.h"
+#import "ABContact.h"
 
 @implementation Text
 
@@ -19,12 +21,6 @@
       self.phoneNumber = number;
       self.message = _message;
       self.authorName = [self lookupPhoneNumber:number];
-      synth = [[NSClassFromString(@"VSSpeechSynthesizer") alloc] init];
-      if (synth == nil) {
-        NSLog(@"Could not create voice synthesizer");
-      } else {
-        [synth startSpeakingString:@"Hello there! Motomadness is on"];
-      }
     }
     
     return self;
@@ -38,28 +34,44 @@
 }
 
 - (NSString *) lookupPhoneNumber:(NSString *) number {
-  if ([number length] < 5) {
+  if ([number length] < 7) {
     return @"Shortcode";
   }
   NSLog(@"not a shortcode");
-  
-  if ([number hasPrefix:@"+"]) {
-    NSString *areaCode = [number substringWithRange:NSMakeRange(1, 3)];
-    return [NSString stringWithFormat:@"Unknown from %@ area code", areaCode];
+
+
+  NSString *usNumber = nil;  
+  BOOL isForeign = NO;
+  if ([number hasPrefix:@"+1"]) {
+    usNumber = [number substringFromIndex:2];
+  } else if ([number hasPrefix:@"1"]) {
+    usNumber = [number substringFromIndex:1];
+  } else {
+    isForeign = YES;
+  }
+
+  ABContact *contact = [ABContactsHelper contactMatchingPhone:isForeign ? number : usNumber];
+  if (contact == nil) {
+    NSLog(@"No found matching contacts with number: %@", isForeign ? number : usNumber);
+    // NSLog(@"contacts db: %@", [ABContactsHelper contacts]);
+
+    if (isForeign) {
+      return @"An unknown foreign number";
+    } else {
+      NSString *areaCode = [usNumber substringWithRange:NSMakeRange(0, 3)];
+      return [NSString stringWithFormat:@"An unknown number in the %c %c %c area code",
+              [areaCode characterAtIndex:0],
+              [areaCode characterAtIndex:1],
+              [areaCode characterAtIndex:2]];
+    }
   }
   
-  NSString *areaCode = [number substringWithRange:NSMakeRange(0, 3)];
-  return [NSString stringWithFormat:@"Unknown from %@ area code", areaCode];
+  NSLog(@"Found matching contact: %@", contact);
+  return [contact compositeName];
 }
 
-- (void) speak {
-  if (synth == nil) {
-    NSLog(@"Could not create voice synthesizer");
-    return;
-  }
-  NSString *spokenMessage = [NSString stringWithFormat:@"From %@. %@", self.authorName, self.message];
-  NSLog(@"spoken message: %@", spokenMessage);
-  [synth startSpeakingString:spokenMessage];
+- (NSString *) spokenMessage {
+  return [NSString stringWithFormat:@"From %@. %@", self.authorName, self.message];
 }
 
 - (NSString *) description {
