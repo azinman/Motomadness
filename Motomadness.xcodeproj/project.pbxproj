@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93AECFEC139DAC9A00C33568 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AECFEB139DAC9A00C33568 /* UIKit.framework */; };
+		93AECFEE139DAC9A00C33568 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AECFED139DAC9A00C33568 /* Foundation.framework */; };
+		93AECFF0139DAC9A00C33568 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AECFEF139DAC9A00C33568 /* CoreGraphics.framework */; };
+		93AECFF6139DAC9A00C33568 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93AECFF4139DAC9A00C33568 /* InfoPlist.strings */; };
+		93AECFF9139DAC9A00C33568 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AECFF8139DAC9A00C33568 /* main.m */; };
+		93AECFFC139DAC9A00C33568 /* MotomadnessAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AECFFB139DAC9A00C33568 /* MotomadnessAppDelegate.m */; };
+		93AECFFF139DAC9A00C33568 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93AECFFD139DAC9A00C33568 /* MainWindow.xib */; };
+		93AED002139DAC9A00C33568 /* MotomadnessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AED001139DAC9A00C33568 /* MotomadnessViewController.m */; };
+		93AED005139DAC9A00C33568 /* MotomadnessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93AED003139DAC9A00C33568 /* MotomadnessViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		93AECFE7139DAC9A00C33568 /* Motomadness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Motomadness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93AECFEB139DAC9A00C33568 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		93AECFED139DAC9A00C33568 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		93AECFEF139DAC9A00C33568 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		93AECFF3139DAC9A00C33568 /* Motomadness-Info.plist */ = {isa = PBXFileReference; path = "Motomadness-Info.plist"; sourceTree = "<group>"; };
+		93AECFF5139DAC9A00C33568 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		93AECFF7139DAC9A00C33568 /* Motomadness-Prefix.pch */ = {isa = PBXFileReference; path = "Motomadness-Prefix.pch"; sourceTree = "<group>"; };
+		93AECFF8139DAC9A00C33568 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		93AECFFA139DAC9A00C33568 /* MotomadnessAppDelegate.h */ = {isa = PBXFileReference; path = MotomadnessAppDelegate.h; sourceTree = "<group>"; };
+		93AECFFB139DAC9A00C33568 /* MotomadnessAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotomadnessAppDelegate.m; sourceTree = "<group>"; };
+		93AECFFE139DAC9A00C33568 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		93AED000139DAC9A00C33568 /* MotomadnessViewController.h */ = {isa = PBXFileReference; path = MotomadnessViewController.h; sourceTree = "<group>"; };
+		93AED001139DAC9A00C33568 /* MotomadnessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotomadnessViewController.m; sourceTree = "<group>"; };
+		93AED004139DAC9A00C33568 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MotomadnessViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93AECFE4139DAC9A00C33568 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93AECFEC139DAC9A00C33568 /* UIKit.framework in Frameworks */,
+				93AECFEE139DAC9A00C33568 /* Foundation.framework in Frameworks */,
+				93AECFF0139DAC9A00C33568 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93AECFDC139DAC9A00C33568 = {
+			isa = PBXGroup;
+			children = (
+				93AECFF1139DAC9A00C33568 /* Motomadness */,
+				93AECFEA139DAC9A00C33568 /* Frameworks */,
+				93AECFE8139DAC9A00C33568 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93AECFE8139DAC9A00C33568 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93AECFE7139DAC9A00C33568 /* Motomadness.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93AECFEA139DAC9A00C33568 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93AECFEB139DAC9A00C33568 /* UIKit.framework */,
+				93AECFED139DAC9A00C33568 /* Foundation.framework */,
+				93AECFEF139DAC9A00C33568 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93AECFF1139DAC9A00C33568 /* Motomadness */ = {
+			isa = PBXGroup;
+			children = (
+				93AECFFA139DAC9A00C33568 /* MotomadnessAppDelegate.h */,
+				93AECFFB139DAC9A00C33568 /* MotomadnessAppDelegate.m */,
+				93AECFFD139DAC9A00C33568 /* MainWindow.xib */,
+				93AED000139DAC9A00C33568 /* MotomadnessViewController.h */,
+				93AED001139DAC9A00C33568 /* MotomadnessViewController.m */,
+				93AED003139DAC9A00C33568 /* MotomadnessViewController.xib */,
+				93AECFF2139DAC9A00C33568 /* Supporting Files */,
+			);
+			path = Motomadness;
+			sourceTree = "<group>";
+		};
+		93AECFF2139DAC9A00C33568 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93AECFF3139DAC9A00C33568 /* Motomadness-Info.plist */,
+				93AECFF4139DAC9A00C33568 /* InfoPlist.strings */,
+				93AECFF7139DAC9A00C33568 /* Motomadness-Prefix.pch */,
+				93AECFF8139DAC9A00C33568 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93AECFE6139DAC9A00C33568 /* Motomadness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93AED008139DAC9A00C33568 /* Build configuration list for PBXNativeTarget "Motomadness" */;
+			buildPhases = (
+				93AECFE3139DAC9A00C33568 /* Sources */,
+				93AECFE4139DAC9A00C33568 /* Frameworks */,
+				93AECFE5139DAC9A00C33568 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Motomadness;
+			productName = Motomadness;
+			productReference = 93AECFE7139DAC9A00C33568 /* Motomadness.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93AECFDE139DAC9A00C33568 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = MIT;
+			};
+			buildConfigurationList = 93AECFE1139DAC9A00C33568 /* Build configuration list for PBXProject "Motomadness" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 93AECFDC139DAC9A00C33568;
+			productRefGroup = 93AECFE8139DAC9A00C33568 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93AECFE6139DAC9A00C33568 /* Motomadness */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93AECFE5139DAC9A00C33568 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93AECFF6139DAC9A00C33568 /* InfoPlist.strings in Resources */,
+				93AECFFF139DAC9A00C33568 /* MainWindow.xib in Resources */,
+				93AED005139DAC9A00C33568 /* MotomadnessViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93AECFE3139DAC9A00C33568 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93AECFF9139DAC9A00C33568 /* main.m in Sources */,
+				93AECFFC139DAC9A00C33568 /* MotomadnessAppDelegate.m in Sources */,
+				93AED002139DAC9A00C33568 /* MotomadnessViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		93AECFF4139DAC9A00C33568 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93AECFF5139DAC9A00C33568 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		93AECFFD139DAC9A00C33568 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93AECFFE139DAC9A00C33568 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		93AED003139DAC9A00C33568 /* MotomadnessViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93AED004139DAC9A00C33568 /* en */,
+			);
+			name = MotomadnessViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93AED006139DAC9A00C33568 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		93AED007139DAC9A00C33568 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		93AED009139DAC9A00C33568 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Motomadness/Motomadness-Prefix.pch";
+				INFOPLIST_FILE = "Motomadness/Motomadness-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		93AED00A139DAC9A00C33568 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Motomadness/Motomadness-Prefix.pch";
+				INFOPLIST_FILE = "Motomadness/Motomadness-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93AECFE1139DAC9A00C33568 /* Build configuration list for PBXProject "Motomadness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93AED006139DAC9A00C33568 /* Debug */,
+				93AED007139DAC9A00C33568 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93AED008139DAC9A00C33568 /* Build configuration list for PBXNativeTarget "Motomadness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93AED009139DAC9A00C33568 /* Debug */,
+				93AED00A139DAC9A00C33568 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93AECFDE139DAC9A00C33568 /* Project object */;
+}
