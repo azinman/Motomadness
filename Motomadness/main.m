@@ -2,16 +2,14 @@
 //  main.m
 //  Motomadness
 //
-//  Created by Aaron Zinman on 6/6/11.
-//  Copyright 2011 MIT. All rights reserved.
-//
+//  Created by Aaron Zinman on 6/7/11.
 
 #import <UIKit/UIKit.h>
 
 int main(int argc, char *argv[])
 {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, nil);
-    [pool release];
-    return retVal;
+  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+  int retVal = UIApplicationMain(argc, argv, nil, nil);
+  [pool release];
+  return retVal;
 }

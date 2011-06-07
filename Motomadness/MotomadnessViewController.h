@@ -2,9 +2,7 @@
 //  MotomadnessViewController.h
 //  Motomadness
 //
-//  Created by Aaron Zinman on 6/6/11.
-//  Copyright 2011 MIT. All rights reserved.
-//
+//  Created by Aaron Zinman on 6/7/11.
 
 #import <UIKit/UIKit.h>
 
