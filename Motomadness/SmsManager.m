@@ -72,11 +72,13 @@ static SmsManager *sharedSingleton;
 
 - (sqlite3 *) openDb {
   sqlite3 *db = NULL;
-  if (!sqlite3_open_v2("/private/var/mobile/Library/SMS/sms.db", &db, 
-                       SQLITE_OPEN_READONLY | SQLITE_OPEN_FULLMUTEX, NULL)) {
-    NSLog(@"Trouble opening sms db");
+  int ret;
+  if ((ret = sqlite3_open_v2("/private/var/mobile/Library/SMS/sms.db", &db, 
+                       SQLITE_OPEN_READONLY, NULL)) != SQLITE_OK) {
+    NSLog(@"Trouble opening sms db; error code %s", sqlite3_errmsg(db));
     return nil;
   };
+  NSLog(@"opened db");
   return db;
 }
 
@@ -84,22 +86,26 @@ static SmsManager *sharedSingleton;
   sqlite3 *db = [self openDb];
   if (db == nil) return -1;
   const char *sql = "select rowid from message order by rowid desc limit 1";
-  sqlite3_stmt *compiledStatement;
-  int ret;
-  if ((ret = sqlite3_prepare_v2(db, sql, -1, &compiledStatement, NULL)) != SQLITE_OK) {
-    NSLog(@"Could not prepare sql statement for some reason: error %d for sql %s", ret, sql);
+  sqlite3_stmt *compiledStatement = nil;
+  if (sqlite3_prepare_v2(db, sql, -1, &compiledStatement, NULL) != SQLITE_OK) {
+    NSLog(@"Could not prepare sql statement for some reason: error %s for sql: %s", sqlite3_errmsg(db), sql);
+    compiledStatement = nil;
     goto err;
   }
-  if ((ret = sqlite3_step(compiledStatement)) != SQLITE_ROW) {
-    NSLog(@"Could not step through sqlite row for last row id: error %d", ret);
+  if (sqlite3_step(compiledStatement) != SQLITE_ROW) {
+    NSLog(@"Could not step through sqlite row for last row id: error %s", sqlite3_errmsg(db));
     goto err;
   }
   
-  int rowId = sqlite3_column_int(compiledStatement, 1);
+  int rowId = sqlite3_column_int(compiledStatement, 0);
+  NSLog(@"any row id error; %s", sqlite3_errmsg(db));
+  sqlite3_finalize(compiledStatement);
   sqlite3_close(db);
+  NSLog(@"latest row id is %d", rowId);
   return rowId;
   
 err:
+  if (compiledStatement != nil) sqlite3_finalize(compiledStatement);
   sqlite3_close(db);
   return -1;
 }
@@ -107,35 +113,37 @@ err:
 - (NSMutableArray *) getLatestTexts {
   sqlite3 *db = [self openDb];
   const char *sql = "select rowid, address, text, flags, group_id from message where rowid > ? order by rowid";
-  sqlite3_stmt *compiledStatement;
-  int ret;
-  if ((ret = sqlite3_prepare_v2(db, sql, -1, &compiledStatement, NULL)) != SQLITE_OK) {
-    NSLog(@"Could not prepare sql statement for some reason: error %d for sql %s", ret, sql);
+  sqlite3_stmt *compiledStatement = nil;
+  if (sqlite3_prepare_v2(db, sql, -1, &compiledStatement, NULL) != SQLITE_OK) {
+    NSLog(@"Could not prepare sql statement for some reason: error %s for sql %s", sqlite3_errmsg(db), sql);
+    compiledStatement = nil;
     goto err;
   }
-  if ((ret = sqlite3_bind_int(compiledStatement, 1, lastRowId)) != SQLITE_OK) {
-    NSLog(@"Could not bind rowid %d for some reason: error %d", lastRowId, ret);
+  if (sqlite3_bind_int(compiledStatement, 1, lastRowId) != SQLITE_OK) {
+    NSLog(@"Could not bind rowid %d for some reason: error %s", lastRowId, sqlite3_errmsg(db));
     goto err;
   }
   NSMutableArray *texts = [[NSMutableArray arrayWithCapacity:10] retain];
   
   while (sqlite3_step(compiledStatement) == SQLITE_ROW) {
-    lastRowId = sqlite3_column_int(compiledStatement, 1);
-    const char *_number = sqlite3_column_text(compiledStatement, 2);
+    lastRowId = sqlite3_column_int(compiledStatement, 0);
+    const char *_number = sqlite3_column_text(compiledStatement, 1);
     NSString *number = [NSString stringWithCString:_number encoding:NSUTF8StringEncoding];
-    const char *_message = sqlite3_column_text(compiledStatement, 3);
+    const char *_message = sqlite3_column_text(compiledStatement, 2);
     NSString *message = [NSString stringWithCString:_message encoding:NSUTF8StringEncoding];
-    int flags = sqlite3_column_int(compiledStatement, 4);
-    int group_id = sqlite3_column_int(compiledStatement, 5);
+    int flags = sqlite3_column_int(compiledStatement, 3);
+    int group_id = sqlite3_column_int(compiledStatement, 4);
     Text *text = [[[Text alloc] initWithPhoneNumber:number message:message] autorelease];
     NSLog(@"Created text: %@", text);
     [texts addObject:text];
   }
   
+  sqlite3_finalize(compiledStatement);
   sqlite3_close(db);
   return [texts autorelease];
   
 err:
+  if (compiledStatement != nil) sqlite3_finalize(compiledStatement);
   sqlite3_close(db);
   return nil;
 }

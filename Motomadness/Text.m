@@ -8,10 +8,6 @@
 
 #import "Text.h"
 
-@interface VSSpeechSynthesizer
-  - (void) startSpeakingString:(NSString *)str;
-@end
-
 @implementation Text
 
 @synthesize phoneNumber, authorName, message;
@@ -23,20 +19,26 @@
       self.phoneNumber = number;
       self.message = _message;
       self.authorName = [self lookupPhoneNumber:number];
+      synth = [[NSClassFromString(@"VSSpeechSynthesizer") alloc] init];
+      if (synth == nil) {
+        NSLog(@"Could not create voice synthesizer");
+      } else {
+        [synth startSpeakingString:@"Hello there! Motomadness is on"];
+      }
     }
     
     return self;
 }
 
 - (void)dealloc {
-  [super dealloc];
   self.phoneNumber = nil;
-  self.authorName = nil;
   self.message = nil;
+  self.authorName = nil;
+  [super dealloc];
 }
 
 - (NSString *) lookupPhoneNumber:(NSString *) number {
-  if ([number length] > 5) {
+  if ([number length] < 5) {
     return @"Shortcode";
   }
   NSLog(@"not a shortcode");
@@ -51,8 +53,13 @@
 }
 
 - (void) speak {
-  VSSpeechSynthesizer *synth = [[NSClassFromString(@"VSSpeechSynthesizer") new]autorelease];
-  [synth startSpeakingString:[NSString stringWithFormat:@"From %@. %@", self.authorName, self.message]];
+  if (synth == nil) {
+    NSLog(@"Could not create voice synthesizer");
+    return;
+  }
+  NSString *spokenMessage = [NSString stringWithFormat:@"From %@. %@", self.authorName, self.message];
+  NSLog(@"spoken message: %@", spokenMessage);
+  [synth startSpeakingString:spokenMessage];
 }
 
 - (NSString *) description {
