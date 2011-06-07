@@ -16,6 +16,11 @@
 		93AECFFF139DAC9A00C33568 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93AECFFD139DAC9A00C33568 /* MainWindow.xib */; };
 		93AED002139DAC9A00C33568 /* MotomadnessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AED001139DAC9A00C33568 /* MotomadnessViewController.m */; };
 		93AED005139DAC9A00C33568 /* MotomadnessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93AED003139DAC9A00C33568 /* MotomadnessViewController.xib */; };
+		93AED00D139DACDF00C33568 /* SmsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AED00C139DACDF00C33568 /* SmsManager.m */; };
+		93AED01C139DBD0300C33568 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AED017139DBD0200C33568 /* FMDatabase.m */; };
+		93AED01D139DBD0300C33568 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AED019139DBD0200C33568 /* FMDatabaseAdditions.m */; };
+		93AED01E139DBD0300C33568 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AED01B139DBD0300C33568 /* FMResultSet.m */; };
+		93AED028139DBF5D00C33568 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AED027139DBF5D00C33568 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +28,25 @@
 		93AECFEB139DAC9A00C33568 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		93AECFED139DAC9A00C33568 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		93AECFEF139DAC9A00C33568 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		93AECFF3139DAC9A00C33568 /* Motomadness-Info.plist */ = {isa = PBXFileReference; path = "Motomadness-Info.plist"; sourceTree = "<group>"; };
+		93AECFF3139DAC9A00C33568 /* Motomadness-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Motomadness-Info.plist"; sourceTree = "<group>"; };
 		93AECFF5139DAC9A00C33568 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		93AECFF7139DAC9A00C33568 /* Motomadness-Prefix.pch */ = {isa = PBXFileReference; path = "Motomadness-Prefix.pch"; sourceTree = "<group>"; };
+		93AECFF7139DAC9A00C33568 /* Motomadness-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Motomadness-Prefix.pch"; sourceTree = "<group>"; };
 		93AECFF8139DAC9A00C33568 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		93AECFFA139DAC9A00C33568 /* MotomadnessAppDelegate.h */ = {isa = PBXFileReference; path = MotomadnessAppDelegate.h; sourceTree = "<group>"; };
+		93AECFFA139DAC9A00C33568 /* MotomadnessAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MotomadnessAppDelegate.h; sourceTree = "<group>"; };
 		93AECFFB139DAC9A00C33568 /* MotomadnessAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotomadnessAppDelegate.m; sourceTree = "<group>"; };
 		93AECFFE139DAC9A00C33568 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		93AED000139DAC9A00C33568 /* MotomadnessViewController.h */ = {isa = PBXFileReference; path = MotomadnessViewController.h; sourceTree = "<group>"; };
+		93AED000139DAC9A00C33568 /* MotomadnessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MotomadnessViewController.h; sourceTree = "<group>"; };
 		93AED001139DAC9A00C33568 /* MotomadnessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotomadnessViewController.m; sourceTree = "<group>"; };
 		93AED004139DAC9A00C33568 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MotomadnessViewController.xib; sourceTree = "<group>"; };
+		93AED00B139DACDF00C33568 /* SmsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmsManager.h; sourceTree = "<group>"; };
+		93AED00C139DACDF00C33568 /* SmsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmsManager.m; sourceTree = "<group>"; };
+		93AED016139DBD0200C33568 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		93AED017139DBD0200C33568 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		93AED018139DBD0200C33568 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		93AED019139DBD0200C33568 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		93AED01A139DBD0200C33568 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		93AED01B139DBD0300C33568 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		93AED027139DBF5D00C33568 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = "Platforms/iPhoneOS.platform/DeviceSupport/4.3.2 (8H7)/Symbols/usr/lib/libsqlite3.dylib"; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,7 @@
 				93AECFEC139DAC9A00C33568 /* UIKit.framework in Frameworks */,
 				93AECFEE139DAC9A00C33568 /* Foundation.framework in Frameworks */,
 				93AECFF0139DAC9A00C33568 /* CoreGraphics.framework in Frameworks */,
+				93AED028139DBF5D00C33568 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +84,7 @@
 		93AECFEA139DAC9A00C33568 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93AED027139DBF5D00C33568 /* libsqlite3.dylib */,
 				93AECFEB139DAC9A00C33568 /* UIKit.framework */,
 				93AECFED139DAC9A00C33568 /* Foundation.framework */,
 				93AECFEF139DAC9A00C33568 /* CoreGraphics.framework */,
@@ -86,6 +102,8 @@
 				93AED001139DAC9A00C33568 /* MotomadnessViewController.m */,
 				93AED003139DAC9A00C33568 /* MotomadnessViewController.xib */,
 				93AECFF2139DAC9A00C33568 /* Supporting Files */,
+				93AED00B139DACDF00C33568 /* SmsManager.h */,
+				93AED00C139DACDF00C33568 /* SmsManager.m */,
 			);
 			path = Motomadness;
 			sourceTree = "<group>";
@@ -93,6 +111,12 @@
 		93AECFF2139DAC9A00C33568 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				93AED016139DBD0200C33568 /* FMDatabase.h */,
+				93AED017139DBD0200C33568 /* FMDatabase.m */,
+				93AED018139DBD0200C33568 /* FMDatabaseAdditions.h */,
+				93AED019139DBD0200C33568 /* FMDatabaseAdditions.m */,
+				93AED01A139DBD0200C33568 /* FMResultSet.h */,
+				93AED01B139DBD0300C33568 /* FMResultSet.m */,
 				93AECFF3139DAC9A00C33568 /* Motomadness-Info.plist */,
 				93AECFF4139DAC9A00C33568 /* InfoPlist.strings */,
 				93AECFF7139DAC9A00C33568 /* Motomadness-Prefix.pch */,
@@ -167,6 +191,10 @@
 				93AECFF9139DAC9A00C33568 /* main.m in Sources */,
 				93AECFFC139DAC9A00C33568 /* MotomadnessAppDelegate.m in Sources */,
 				93AED002139DAC9A00C33568 /* MotomadnessViewController.m in Sources */,
+				93AED00D139DACDF00C33568 /* SmsManager.m in Sources */,
+				93AED01C139DBD0300C33568 /* FMDatabase.m in Sources */,
+				93AED01D139DBD0300C33568 /* FMDatabaseAdditions.m in Sources */,
+				93AED01E139DBD0300C33568 /* FMResultSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +269,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Motomadness/Motomadness-Prefix.pch";
 				INFOPLIST_FILE = "Motomadness/Motomadness-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/DeviceSupport/4.3.2 (8H7)/Symbols/usr/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -254,6 +286,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Motomadness/Motomadness-Prefix.pch";
 				INFOPLIST_FILE = "Motomadness/Motomadness-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/DeviceSupport/4.3.2 (8H7)/Symbols/usr/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
