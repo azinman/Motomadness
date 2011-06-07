@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		932F12B6139DDD0B00E23F5E /* VoiceServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932F12B5139DDD0B00E23F5E /* VoiceServices.framework */; };
+		932F12B9139DE49E00E23F5E /* Text.m in Sources */ = {isa = PBXBuildFile; fileRef = 932F12B8139DE49E00E23F5E /* Text.m */; };
 		93AECFEC139DAC9A00C33568 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AECFEB139DAC9A00C33568 /* UIKit.framework */; };
 		93AECFEE139DAC9A00C33568 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AECFED139DAC9A00C33568 /* Foundation.framework */; };
 		93AECFF0139DAC9A00C33568 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AECFEF139DAC9A00C33568 /* CoreGraphics.framework */; };
@@ -17,13 +19,13 @@
 		93AED002139DAC9A00C33568 /* MotomadnessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AED001139DAC9A00C33568 /* MotomadnessViewController.m */; };
 		93AED005139DAC9A00C33568 /* MotomadnessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93AED003139DAC9A00C33568 /* MotomadnessViewController.xib */; };
 		93AED00D139DACDF00C33568 /* SmsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AED00C139DACDF00C33568 /* SmsManager.m */; };
-		93AED01C139DBD0300C33568 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AED017139DBD0200C33568 /* FMDatabase.m */; };
-		93AED01D139DBD0300C33568 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AED019139DBD0200C33568 /* FMDatabaseAdditions.m */; };
-		93AED01E139DBD0300C33568 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AED01B139DBD0300C33568 /* FMResultSet.m */; };
-		93AED028139DBF5D00C33568 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AED027139DBF5D00C33568 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		932F12AC139DCFB400E23F5E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		932F12B5139DDD0B00E23F5E /* VoiceServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VoiceServices.framework; path = System/Library/PrivateFrameworks/VoiceServices.framework; sourceTree = SDKROOT; };
+		932F12B7139DE49E00E23F5E /* Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Text.h; sourceTree = "<group>"; };
+		932F12B8139DE49E00E23F5E /* Text.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Text.m; sourceTree = "<group>"; };
 		93AECFE7139DAC9A00C33568 /* Motomadness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Motomadness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93AECFEB139DAC9A00C33568 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		93AECFED139DAC9A00C33568 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,13 +42,6 @@
 		93AED004139DAC9A00C33568 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MotomadnessViewController.xib; sourceTree = "<group>"; };
 		93AED00B139DACDF00C33568 /* SmsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmsManager.h; sourceTree = "<group>"; };
 		93AED00C139DACDF00C33568 /* SmsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmsManager.m; sourceTree = "<group>"; };
-		93AED016139DBD0200C33568 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		93AED017139DBD0200C33568 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		93AED018139DBD0200C33568 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		93AED019139DBD0200C33568 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		93AED01A139DBD0200C33568 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		93AED01B139DBD0300C33568 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		93AED027139DBF5D00C33568 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = "Platforms/iPhoneOS.platform/DeviceSupport/4.3.2 (8H7)/Symbols/usr/lib/libsqlite3.dylib"; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +49,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93AECFEC139DAC9A00C33568 /* UIKit.framework in Frameworks */,
 				93AECFEE139DAC9A00C33568 /* Foundation.framework in Frameworks */,
 				93AECFF0139DAC9A00C33568 /* CoreGraphics.framework in Frameworks */,
-				93AED028139DBF5D00C33568 /* libsqlite3.dylib in Frameworks */,
+				93AECFEC139DAC9A00C33568 /* UIKit.framework in Frameworks */,
+				932F12B6139DDD0B00E23F5E /* VoiceServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +79,8 @@
 		93AECFEA139DAC9A00C33568 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				93AED027139DBF5D00C33568 /* libsqlite3.dylib */,
+				932F12B5139DDD0B00E23F5E /* VoiceServices.framework */,
+				932F12AC139DCFB400E23F5E /* libsqlite3.dylib */,
 				93AECFEB139DAC9A00C33568 /* UIKit.framework */,
 				93AECFED139DAC9A00C33568 /* Foundation.framework */,
 				93AECFEF139DAC9A00C33568 /* CoreGraphics.framework */,
@@ -95,6 +91,8 @@
 		93AECFF1139DAC9A00C33568 /* Motomadness */ = {
 			isa = PBXGroup;
 			children = (
+				932F12B7139DE49E00E23F5E /* Text.h */,
+				932F12B8139DE49E00E23F5E /* Text.m */,
 				93AECFFA139DAC9A00C33568 /* MotomadnessAppDelegate.h */,
 				93AECFFB139DAC9A00C33568 /* MotomadnessAppDelegate.m */,
 				93AECFFD139DAC9A00C33568 /* MainWindow.xib */,
@@ -111,12 +109,6 @@
 		93AECFF2139DAC9A00C33568 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				93AED016139DBD0200C33568 /* FMDatabase.h */,
-				93AED017139DBD0200C33568 /* FMDatabase.m */,
-				93AED018139DBD0200C33568 /* FMDatabaseAdditions.h */,
-				93AED019139DBD0200C33568 /* FMDatabaseAdditions.m */,
-				93AED01A139DBD0200C33568 /* FMResultSet.h */,
-				93AED01B139DBD0300C33568 /* FMResultSet.m */,
 				93AECFF3139DAC9A00C33568 /* Motomadness-Info.plist */,
 				93AECFF4139DAC9A00C33568 /* InfoPlist.strings */,
 				93AECFF7139DAC9A00C33568 /* Motomadness-Prefix.pch */,
@@ -133,8 +125,8 @@
 			buildConfigurationList = 93AED008139DAC9A00C33568 /* Build configuration list for PBXNativeTarget "Motomadness" */;
 			buildPhases = (
 				93AECFE3139DAC9A00C33568 /* Sources */,
-				93AECFE4139DAC9A00C33568 /* Frameworks */,
 				93AECFE5139DAC9A00C33568 /* Resources */,
+				93AECFE4139DAC9A00C33568 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,7 +143,7 @@
 		93AECFDE139DAC9A00C33568 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				ORGANIZATIONNAME = MIT;
+				ORGANIZATIONNAME = AARONZ;
 			};
 			buildConfigurationList = 93AECFE1139DAC9A00C33568 /* Build configuration list for PBXProject "Motomadness" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -192,9 +184,7 @@
 				93AECFFC139DAC9A00C33568 /* MotomadnessAppDelegate.m in Sources */,
 				93AED002139DAC9A00C33568 /* MotomadnessViewController.m in Sources */,
 				93AED00D139DACDF00C33568 /* SmsManager.m in Sources */,
-				93AED01C139DBD0300C33568 /* FMDatabase.m in Sources */,
-				93AED01D139DBD0300C33568 /* FMDatabaseAdditions.m in Sources */,
-				93AED01E139DBD0300C33568 /* FMResultSet.m in Sources */,
+				932F12B9139DE49E00E23F5E /* Text.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,32 +221,36 @@
 		93AED006139DAC9A00C33568 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				SDKROOT = iphoneos;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos4.3;
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Debug;
 		};
 		93AED007139DAC9A00C33568 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos4.3;
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Release;
 		};
@@ -264,16 +258,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Motomadness/Motomadness-Prefix.pch";
 				INFOPLIST_FILE = "Motomadness/Motomadness-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/DeviceSupport/4.3.2 (8H7)/Symbols/usr/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = iphoneos;
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -282,16 +284,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Motomadness/Motomadness-Prefix.pch";
 				INFOPLIST_FILE = "Motomadness/Motomadness-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/DeviceSupport/4.3.2 (8H7)/Symbols/usr/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -315,6 +325,7 @@
 				93AED00A139DAC9A00C33568 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
