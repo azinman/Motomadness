@@ -7,16 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <sqlite3.h>
 
 @interface SmsManager : NSObject {
 @private
-    NSDate *lastDate;
+  NSDate *lastDate;
+  int lastRowId;
 }
 
 + (SmsManager *) sharedInstance;
 - (NSDate *) getSmsDate;
 - (void) checkRoutine;
+- (sqlite3 *) openDb;
+- (int) getLastRowId;
+- (NSMutableArray *) getLatestTexts;
 
 @property (nonatomic, retain) NSDate *lastDate;
 
